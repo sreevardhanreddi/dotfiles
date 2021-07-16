@@ -1,3 +1,5 @@
+#!/bin/sh 
+
 # install tmux and xclip and xsel to copy via mouse
 apt install tmux xclip xsel -y
 
