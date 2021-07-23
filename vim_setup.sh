@@ -1,8 +1,8 @@
 # install neovim
 apt install software-properties-common
-add-apt-repository ppa:neovim-ppa/stable
+add-apt-repository ppa:neovim-ppa/stable -y
 apt update
-apt install neovim
+apt install neovim -y
 
 # todo add node setup ? for COC
 # curl -sL install-node.now.sh/lts | bash
