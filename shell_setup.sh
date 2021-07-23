@@ -41,7 +41,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 # echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
 
-cp confs/* $HOME
+cp -r confs/. $HOME
 
 echo "restart your terminal and setup the fonts in the terminal preferences ... "
 

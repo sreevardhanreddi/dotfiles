@@ -10,7 +10,7 @@ apt install tmux xclip xsel -y
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 
 # copy .tmux.conf 
-ln -sf ./confs/.tmux.conf $HOME/.tmux.conf
+cp ./confs/.tmux.conf $HOME/.tmux.conf
 
 echo "start tmux using the below commands to make it render fonts with powerlevel"
 echo "tmux -u new -s <session_name>"
