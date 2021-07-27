@@ -4,6 +4,12 @@ add-apt-repository ppa:neovim-ppa/stable -y
 apt update
 apt install neovim -y
 
+# copy .vimrc config to init.vim at $HOME/.config/nvim
+mkdir -p $HOME/.config/nvim && \
+       cd $HOME/.config/nvim && \
+       touch init.vim && \
+       cat $HOME/.vimrc > init.vim
+
 # todo add node setup ? for COC
 # curl -sL install-node.now.sh/lts | bash
 
