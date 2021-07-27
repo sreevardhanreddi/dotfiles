@@ -1,7 +1,17 @@
-#!/bin/sh 
+#!/bin/bash
+
+source utils.sh
+
+echo "installing xclip and xsel for copy"
+
+echo_separator
 
 # install tmux and xclip and xsel to copy via mouse
 apt install tmux xclip xsel -y
+
+echo_separator
+
+echo "installing tpm"
 
 # # 
 # rm -rf $HOME/.tmux
@@ -9,9 +19,13 @@ apt install tmux xclip xsel -y
 # clone tmux package manager
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 
+echo_separator
+
 # copy .tmux.conf 
 # cp ./confs/.tmux.conf $HOME/.tmux.conf
-ln -sv ./confs/.tmux.conf $HOME/.tmux.conf
+# ln -sv ./confs/.tmux.conf $HOME/.tmux.conf
+
+echo_separator
 
 echo "start tmux using the below commands to make it render fonts with powerlevel"
 echo "tmux -u new -s <session_name>"
@@ -30,3 +44,4 @@ echo "prefix + u"
 
 echo "here prefix is 'ctrl + b'"
 
+echo_separator

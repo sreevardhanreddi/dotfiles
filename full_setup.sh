@@ -1,4 +1,4 @@
-#!/bin/sh 
+#!/bin/bash
 
 rm -rf dotfiles && \ 
     git clone https://github.com/sreevardhanreddi/dotfiles.git && \ 
