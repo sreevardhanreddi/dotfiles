@@ -43,7 +43,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 # symlink instead of copy
 # cp -r confs/. $HOME
-ln -sv confs/.* $HOME
+ln -sfv confs/.* $HOME
 
 echo "restart your terminal and setup the fonts in the terminal preferences ... "
 
