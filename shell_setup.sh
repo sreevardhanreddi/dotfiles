@@ -3,9 +3,7 @@
 # import utils.sh file
 source utils.sh
 
-echo_separator
-echo "installing zsh, tmux, ohmyzsh, fonts"
-echo_separator
+log "installing zsh, tmux, ohmyzsh, fonts"
 
 # install dependencies
 apt-get install zsh curl git wget font-manager -y
@@ -16,9 +14,7 @@ apt-get install fonts-powerline tmux
 # install ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-echo_separator
-echo "downloading and installing fonts ..."
-echo_separator
+log "downloading and installing fonts ..."
 
 # create fonts folder
 mkdir -p fonts
@@ -35,9 +31,7 @@ cp fonts/* /usr/share/fonts
 # refresh fonts cache
 fc-cache -fv
 
-echo_separator
-echo "installing zsh plugins, syntax highlighting, zsh autosuggestions and p10k theme"
-echo_separator
+log "installing zsh plugins, syntax highlighting, zsh autosuggestions and p10k theme"
 
 # additional install zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
@@ -56,9 +50,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 # echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
 
-echo_separator
-echo "symlinking conf files ..."
-echo_separator
+log "symlinking conf files ..."
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
@@ -67,9 +59,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 # cp -r confs/. $HOME
 ln -sfv $SCRIPT_DIR/confs/.* $HOME
 
-echo_separator
-echo "follow these instructions"
-echo_separator
+log "follow these instructions"
 
 echo "restart your terminal and setup the fonts in the terminal preferences ... "
 echo "remember to run export TERM=xterm-256color"

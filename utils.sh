@@ -5,3 +5,9 @@ echo_separator () {
     i=0
     while [ $i -lt $cols ]; do echo -n "_"; i=`expr $i + 1`; done; echo
 }
+
+log () {
+    echo_separator
+    echo $1
+    echo_separator
+}
