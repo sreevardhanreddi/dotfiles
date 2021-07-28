@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -d $HOME/.dotfiles && $1 != "-f" ]; 
+if [ -d $HOME/.dotfiles && $1 != "-f" ]; then
     exit 0
 fi
 
