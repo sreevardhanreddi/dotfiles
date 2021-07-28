@@ -1,9 +1,16 @@
 # Dotfiles
 
 ## Configures
-- zsh
-- tmux
+- zsh (with powelevel10k)
+- tmux (with tpm)
+- neo(vim) (with vimplug)
 - and common aliases
+
+## installs extra terminal binaries
+
+- bat (https://github.com/sharkdp/bat)
+- lsd (https://github.com/Peltoche/lsd)
+- fd (https://github.com/sharkdp/fd)
 
 ``` shell
 
