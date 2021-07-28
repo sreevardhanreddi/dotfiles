@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source utils.sh
+source ./scripts/utils.sh
 
 log "installing xclip and xsel for copying inside tmux"
 

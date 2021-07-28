@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 # import utils.sh file
-source utils.sh
+source ./scripts/utils.sh
 
 log "installing zsh, tmux, ohmyzsh, fonts"
 

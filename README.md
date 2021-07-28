@@ -9,8 +9,9 @@
 ## installs extra terminal binaries
 
 - bat (https://github.com/sharkdp/bat)
-- lsd (https://github.com/Peltoche/lsd)
 - fd (https://github.com/sharkdp/fd)
+- lsd (https://github.com/Peltoche/lsd)
+- fzf (https://github.com/junegunn/fzf)
 
 ``` shell
 
@@ -18,6 +19,6 @@ sudo -s
 
 apt update -y && apt install curl git -y
 
-curl https://raw.githubusercontent.com/sreevardhanreddi/dotfiles/master/full_setup.sh | bash
+curl https://raw.githubusercontent.com/sreevardhanreddi/dotfiles/master/scripts/full_setup.sh | bash
 
 ```
