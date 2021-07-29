@@ -19,6 +19,6 @@
 sudo -s
 
 apt update -y && apt install curl git -y && \
-    curl https://raw.githubusercontent.com/sreevardhanreddi/dotfiles/master/scripts/full_setup.sh | bash
+    curl https://raw.githubusercontent.com/sreevardhanreddi/dotfiles/master/setup.sh | bash
 
 ```

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -rf .dotfiles && \ 
+rm -rf $HOME/.dotfiles && \ 
     git clone https://github.com/sreevardhanreddi/dotfiles.git $HOME/.dotfiles && \ 
     cd $HOME/.dotfiles && \ 
     ./scripts/shell_setup.sh && \
