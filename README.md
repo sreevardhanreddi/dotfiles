@@ -9,10 +9,10 @@
 
 ## installs extra terminal binaries
 
-- bat (https://github.com/sharkdp/bat)
-- fd (https://github.com/sharkdp/fd)
-- lsd (https://github.com/Peltoche/lsd)
-- fzf (https://github.com/junegunn/fzf)
+- [bat](https://github.com/sharkdp/bat)
+- [fd](https://github.com/sharkdp/fd)
+- [lsd](https://github.com/Peltoche/lsd)
+- [fzf](https://github.com/junegunn/fzf)
 
 ```shell
 
