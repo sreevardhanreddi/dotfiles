@@ -1,6 +1,7 @@
 # Dotfiles
 
 ## Configures
+
 - zsh (with powelevel10k)
 - tmux (with tpm)
 - neo(vim) (with vimplug)
@@ -13,12 +14,11 @@
 - lsd (https://github.com/Peltoche/lsd)
 - fzf (https://github.com/junegunn/fzf)
 
-``` shell
+```shell
 
 sudo -s
 
-apt update -y && apt install curl git -y
-
-curl https://raw.githubusercontent.com/sreevardhanreddi/dotfiles/master/scripts/full_setup.sh | bash
+apt update -y && apt install curl git -y && \
+    curl https://raw.githubusercontent.com/sreevardhanreddi/dotfiles/master/scripts/full_setup.sh | bash
 
 ```
