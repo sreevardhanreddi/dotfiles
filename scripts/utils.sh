@@ -9,5 +9,5 @@ echo_separator () {
 log () {
     echo_separator
     echo $1
-    echo_separator
+    echo
 }

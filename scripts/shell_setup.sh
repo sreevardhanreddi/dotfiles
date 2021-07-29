@@ -52,12 +52,12 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 log "symlinking conf files ..."
 
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+# SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 
 # symlink instead of copy
 # cp -r confs/. $HOME
-ln -sfv $SCRIPT_DIR/confs/.* $HOME
+ln -sfv $HOME/.dotfiles/confs/.* $HOME
 
 log "follow these instructions"
 

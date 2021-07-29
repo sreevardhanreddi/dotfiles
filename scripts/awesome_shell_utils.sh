@@ -54,8 +54,8 @@ FZF_RELEASE_FILE="fzf-${FZF_RELEASE_VERSION}-linux_amd64.tar.gz"
 
 wget -c -q https://github.com/junegunn/fzf/releases/download/$FZF_RELEASE_VERSION/$FZF_RELEASE_FILE -O $BIN_FOLDER/$FZF_RELEASE_FILE
 
-tar -xvf $BIN_FOLDER/$FZF_RELEASE_FILE
+tar -xvf $BIN_FOLDER/$FZF_RELEASE_FILE -C bins/
 
-cp fzf /usr/bin
+cp $BIN_FOLDER/fzf /usr/bin
 
 echo_separator
