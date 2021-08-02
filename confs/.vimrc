@@ -6,11 +6,14 @@ Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
 Plug 'itchyny/lightline.vim'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'crusoexia/vim-monokai'
+
 
 " Initialize plugin system
 call plug#end()
 
-colorscheme onehalfdark
+" colorscheme onehalfdark
+colorscheme monokai
 
 " nerd tree toggle with ctrl+o
 map <C-o> :NERDTreeToggle<CR>
