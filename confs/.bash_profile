@@ -14,6 +14,8 @@ alias tmux="tmux -u $@"
 # lsd and bat aliases
 alias ls="lsd"
 alias cat="bat"
+alias drdi="docker rmi $(sudo docker images -f "dangling=true" -q)"
+
 
 export PATH=$PATH:/usr/local/go/bin
 
