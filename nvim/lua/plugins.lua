@@ -8,20 +8,17 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-    -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
+    use 'wbthomason/packer.nvim' -- Packer can manage itself
     use 'nvim-lualine/lualine.nvim' -- Statusline
     use 'nvim-lua/plenary.nvim' -- Common utilities
-    use { 'neoclide/coc.nvim', branch = 'release' }
+    use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' }
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+        "williamboman/nvim-lsp-installer",
+        "neovim/nvim-lspconfig",
     }
     use 'tjdevries/colorbuddy.nvim'
     use 'projekt0n/github-nvim-theme'
     use 'folke/tokyonight.nvim'
     use 'gruvbox-community/gruvbox'
     use 'kyazdani42/nvim-web-devicons' -- File icons
-
-
 end)

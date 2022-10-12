@@ -5,6 +5,8 @@ vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
+vim.opt.syntax = 'on' -- syntax highlighting
+
 vim.opt.laststatus = 2
 
 vim.opt.termguicolors = true -- set term gui colors (most terminals support this)
