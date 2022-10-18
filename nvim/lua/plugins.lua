@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
     }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'p00f/nvim-ts-rainbow'
+    use 'akinsho/toggleterm.nvim'
 
     -- auto completion
     use 'hrsh7th/cmp-nvim-lsp'
