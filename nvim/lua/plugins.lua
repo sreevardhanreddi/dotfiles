@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
     }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
-
+    -- auto completion
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
@@ -33,7 +33,11 @@ return require('packer').startup(function(use)
     use 'projekt0n/github-nvim-theme'
     use 'folke/tokyonight.nvim'
     use 'gruvbox-community/gruvbox'
-    use 'kyazdani42/nvim-web-devicons' -- File icons
+
+    use 'nvim-tree/nvim-web-devicons' -- File icons
+    use 'nvim-tree/nvim-tree.lua'
+
+    use 'numToStr/Comment.nvim' -- Commenting
 
     use 'nvim-lualine/lualine.nvim' -- Statusline
 end)
