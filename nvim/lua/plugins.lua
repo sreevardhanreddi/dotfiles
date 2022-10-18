@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
         "neovim/nvim-lspconfig",
     }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use 'p00f/nvim-ts-rainbow'
 
     -- auto completion
     use 'hrsh7th/cmp-nvim-lsp'
@@ -25,6 +26,9 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
+    use 'onsails/lspkind-nvim'
+    use "saadparwaiz1/cmp_luasnip" -- Snippets source
+    use "L3MON4D3/LuaSnip" -- Snippet engine
 
     use 'windwp/nvim-autopairs' -- Autopairs
     use 'windwp/nvim-ts-autotag' -- Autotags
@@ -33,6 +37,7 @@ return require('packer').startup(function(use)
     use 'projekt0n/github-nvim-theme'
     use 'folke/tokyonight.nvim'
     use 'gruvbox-community/gruvbox'
+    use 'martinsione/darkplus.nvim'
 
     use 'nvim-tree/nvim-web-devicons' -- File icons
     use 'nvim-tree/nvim-tree.lua'
