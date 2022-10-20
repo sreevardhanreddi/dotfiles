@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'p00f/nvim-ts-rainbow'
     use 'akinsho/toggleterm.nvim'
+    use { 'akinsho/bufferline.nvim', tag = 'v3.*' }
 
     -- auto completion
     use 'hrsh7th/cmp-nvim-lsp'
@@ -46,4 +47,7 @@ return require('packer').startup(function(use)
     use 'numToStr/Comment.nvim' -- Commenting
 
     use 'nvim-lualine/lualine.nvim' -- Statusline
+
+    use 'lewis6991/gitsigns.nvim'
+    use 'jose-elias-alvarez/null-ls.nvim'
 end)
