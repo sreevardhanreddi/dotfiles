@@ -9,5 +9,15 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 
+-- window splits
+keymap('n', 'ss', ':split<Return>', opts)
+keymap('n', 'sv', ':vsplit<Return>', opts)
+
+-- window navigation
+keymap("n", "sh", "<C-w>h", opts)
+keymap("n", "sj", "<C-w>j", opts)
+keymap("n", "sk", "<C-w>k", opts)
+keymap("n", "sl", "<C-w>l", opts)
+
 -- NvimTreeToggle
 keymap("n", "<leader>e", ":NvimTreeToggle", opts)
