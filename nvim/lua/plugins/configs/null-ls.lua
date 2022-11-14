@@ -8,7 +8,7 @@ require("null-ls").setup({
     require("null-ls").builtins.formatting.gofmt,
     require("null-ls").builtins.formatting.phpcsfixer,
     require("null-ls").builtins.diagnostics.eslint,
-    require("null-ls").builtins.completion.spell,
+    require("null-ls").builtins.diagnostics.spell
   },
 
   on_attach = function(client, bufnr)

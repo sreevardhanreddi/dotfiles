@@ -14,8 +14,8 @@ return require('packer').startup(function(use)
   use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' }
 
   use {
-    "williamboman/nvim-lsp-installer",
-    "neovim/nvim-lspconfig",
+    'williamboman/nvim-lsp-installer',
+    'neovim/nvim-lspconfig',
   }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'p00f/nvim-ts-rainbow'
@@ -29,18 +29,22 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
   use 'onsails/lspkind-nvim'
-  use "saadparwaiz1/cmp_luasnip" -- Snippets source
-  use "L3MON4D3/LuaSnip" -- Snippet engine
+  use 'saadparwaiz1/cmp_luasnip' -- Snippets source
+  use 'L3MON4D3/LuaSnip' -- Snippet engine
+  use 'rafamadriz/friendly-snippets'
+
 
   use 'windwp/nvim-autopairs' -- Autopairs
   use 'windwp/nvim-ts-autotag' -- Autotags
 
+  -- colorthemes
   use 'tjdevries/colorbuddy.nvim'
   use 'projekt0n/github-nvim-theme'
   use 'folke/tokyonight.nvim'
   use 'gruvbox-community/gruvbox'
   use 'martinsione/darkplus.nvim'
 
+  -- nvimtree filetree
   use 'nvim-tree/nvim-web-devicons' -- File icons
   use 'nvim-tree/nvim-tree.lua'
 
