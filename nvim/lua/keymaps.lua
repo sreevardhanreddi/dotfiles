@@ -21,3 +21,7 @@ keymap("n", "sl", "<C-w>l", opts)
 
 -- NvimTreeToggle
 keymap("n", "<leader>e", ":NvimTreeToggle", opts)
+
+-- copilot
+vim.g.copilot_assumed_mapped = true
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })

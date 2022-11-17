@@ -52,11 +52,13 @@ return require('packer').startup(function(use)
 
   use 'nvim-lualine/lualine.nvim' -- Statusline
 
-  use 'lewis6991/gitsigns.nvim'
-  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'lewis6991/gitsigns.nvim' -- GitSigns
+  use 'jose-elias-alvarez/null-ls.nvim' -- Null-ls for autoformatting
 
   use 'folke/which-key.nvim'
 
   use 'lukas-reineke/indent-blankline.nvim'
+
+  use 'gpanders/editorconfig.nvim' -- editorconfig
 
 end)
