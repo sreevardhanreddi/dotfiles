@@ -8,10 +8,9 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-
 -- window splits
-keymap('n', 'ss', ':split<Return>', opts)
-keymap('n', 'sv', ':vsplit<Return>', opts)
+keymap("n", "ss", ":split<Return>", opts)
+keymap("n", "sv", ":vsplit<Return>", opts)
 
 -- window navigation
 keymap("n", "sh", "<C-w>h", opts)

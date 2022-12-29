@@ -1,11 +1,11 @@
 vim.opt.number = true -- set numbered lines
 vim.opt.relativenumber = true -- set relative numbered lines
 
-vim.scriptencoding = 'utf-8'
-vim.opt.encoding = 'utf-8'
-vim.opt.fileencoding = 'utf-8'
+vim.scriptencoding = "utf-8"
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
 
-vim.opt.syntax = 'on' -- syntax highlighting
+vim.opt.syntax = "on" -- syntax highlighting
 
 vim.opt.laststatus = 2
 
