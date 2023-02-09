@@ -61,6 +61,8 @@ return require("packer").startup(function(use)
 
 	use("gpanders/editorconfig.nvim") -- editorconfig
 
+	use("mg979/vim-visual-multi", { branch = "master" }) -- visual multi
+
 	use({
 		"kylechui/nvim-surround",
 		tag = "*",
