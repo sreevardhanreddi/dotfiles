@@ -19,7 +19,7 @@ keymap("n", "sk", "<C-w>k", opts)
 keymap("n", "sl", "<C-w>l", opts)
 
 -- NvimTreeToggle
-keymap("n", "<leader>e", ":NvimTreeToggle", opts)
+keymap("n", "<leader>e", ":NeoTreeRevealToggle", opts)
 
 -- copilot
 vim.g.copilot_assumed_mapped = true

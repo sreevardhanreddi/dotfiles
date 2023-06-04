@@ -1,7 +1,7 @@
 require("settings")
 require("keymaps")
 
-vim.cmd("colorscheme tokyonight-night")
+vim.cmd("colorscheme monokai-pro")
 
 require("plugins")
 require("plugins.configs.telescope")
@@ -10,7 +10,7 @@ require("plugins.configs.treesitter")
 require("plugins.configs.lsp-config")
 require("plugins.configs.cmp")
 require("plugins.configs.autopairs")
-require("plugins.configs.nvimtree")
+require("plugins.configs.neotree")
 require("plugins.configs.comment")
 require("plugins.configs.toggleterm")
 require("plugins.configs.bufferline")
