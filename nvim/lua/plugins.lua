@@ -76,18 +76,18 @@ return require("packer").startup(function(use)
 		},
 	})
 
-	use("numToStr/Comment.nvim")        -- Commenting
+	use("numToStr/Comment.nvim") -- Commenting
 
-	use("nvim-lualine/lualine.nvim")    -- Statusline
+	use("nvim-lualine/lualine.nvim") -- Statusline
 
-	use("lewis6991/gitsigns.nvim")      -- GitSigns
+	use("lewis6991/gitsigns.nvim") -- GitSigns
 	use("jose-elias-alvarez/null-ls.nvim") -- Null-ls for autoformatting
 
 	use("folke/which-key.nvim")
 
 	use("lukas-reineke/indent-blankline.nvim")
 
-	use("gpanders/editorconfig.nvim")                 -- editorconfig
+	use("gpanders/editorconfig.nvim") -- editorconfig
 
 	use("mg979/vim-visual-multi", { branch = "master" }) -- visual multi
 

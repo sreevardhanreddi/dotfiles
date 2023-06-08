@@ -1,7 +1,7 @@
 require("settings")
 require("keymaps")
 
-vim.cmd("colorscheme monokai-pro")
+vim.cmd.colorscheme("tokyonight-night")
 
 require("plugins")
 require("plugins.configs.telescope")
