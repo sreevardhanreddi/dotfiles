@@ -1,101 +1,118 @@
-local status, packer = pcall(require, "packer")
-if not status then
-	print("Packer is not installed")
-	return
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
--- Only required if you have packer configured as `opt`
-vim.cmd([[packadd packer.nvim]])
+-- local status, packer = pcall(require, "packer")
+-- if not status then
+-- 	print("Packer is not installed")
+-- 	return
+-- end
+--
+-- -- Only required if you have packer configured as `opt`
+-- vim.cmd([[packadd packer.nvim]])
+--
 
-return require("packer").startup(function(use)
-	use("wbthomason/packer.nvim") -- Packer can manage itself
-	use("nvim-lua/plenary.nvim") -- Common utilities
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0" })
+return require("lazy").setup({
+  -- use("wbthomason/packer.nvim") -- Packer can manage itself
+  "nvim-lua/plenary.nvim", -- Common utilities
 
-	use({
-		"VonHeikemen/lsp-zero.nvim",
-		branch = "v2.x",
-		requires = {
-			-- LSP Support
-			{ "neovim/nvim-lspconfig" }, -- Required
-			{
-				-- Optional
-				"williamboman/mason.nvim",
-				run = function()
-					pcall(vim.cmd, "MasonUpdate")
-				end,
-			},
-			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
+  { "nvim-telescope/telescope.nvim",   tag = "0.1.1" },
 
-			-- Autocompletion
-			{ "hrsh7th/nvim-cmp" },
-			{ "hrsh7th/cmp-buffer" },
-			{ "hrsh7th/cmp-path" },
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "hrsh7th/cmp-nvim-lua" },
-			{ "hrsh7th/cmp-cmdline" },
-			{ "saadparwaiz1/cmp_luasnip" },
+  {
+    "VonHeikemen/lsp-zero.nvim",
+    branch = "v2.x",
+    dependencies = {
+      -- LSP Support
+      { "neovim/nvim-lspconfig" }, -- Required
+      {
+        -- Optional
+        "williamboman/mason.nvim",
+        build = function()
+          pcall(vim.cmd, "MasonUpdate")
+        end,
+      },
+      { "williamboman/mason-lspconfig.nvim" }, -- Optional
 
-			-- Snippets
-			{ "L3MON4D3/LuaSnip" }, -- Snippet engine
-			{ "rafamadriz/friendly-snippets" },
-		},
-	})
+      -- Autocompletion
+      { "hrsh7th/nvim-cmp" },
+      { "hrsh7th/cmp-buffer" },
+      { "hrsh7th/cmp-path" },
+      { "hrsh7th/cmp-nvim-lsp" },
+      { "hrsh7th/cmp-nvim-lua" },
+      { "hrsh7th/cmp-cmdline" },
+      { "saadparwaiz1/cmp_luasnip" },
 
-	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	use("p00f/nvim-ts-rainbow")
-	use("akinsho/toggleterm.nvim")
-	use({ "akinsho/bufferline.nvim", tag = "v3.*" })
+      -- Snippets
+      { "L3MON4D3/LuaSnip" }, -- Snippet engine
+      { "rafamadriz/friendly-snippets" },
+    },
+  },
 
-	-- auto completion
-	use("onsails/lspkind-nvim")
-	use("windwp/nvim-autopairs") -- Autopairs
-	use("windwp/nvim-ts-autotag") -- Autotags
+  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+  "p00f/nvim-ts-rainbow",
+  "akinsho/toggleterm.nvim",
+  { "akinsho/bufferline.nvim",    version = "*" },
 
-	-- colorthemes
-	use("tjdevries/colorbuddy.nvim")
-	use("projekt0n/github-nvim-theme")
-	use("folke/tokyonight.nvim")
-	use("gruvbox-community/gruvbox")
-	use("martinsione/darkplus.nvim")
-	use({
-		"loctvl842/monokai-pro.nvim",
-		config = function()
-			require("monokai-pro").setup()
-		end,
-	})
+  -- auto completion
+  "onsails/lspkind-nvim",
+  "windwp/nvim-autopairs",  -- Autopairs
+  "windwp/nvim-ts-autotag", -- Autotags
 
-	use({
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v2.x",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-			"MunifTanjim/nui.nvim",
-		},
-	})
+  -- colorthemes
+  { "tjdevries/colorbuddy.nvim" },
+  { "projekt0n/github-nvim-theme" },
+  { "folke/tokyonight.nvim" },
+  { "gruvbox-community/gruvbox" },
+  { "martinsione/darkplus.nvim" },
+  {
+    "loctvl842/monokai-pro.nvim",
+    config = function()
+      require("monokai-pro").setup()
+    end,
+  },
 
-	use("numToStr/Comment.nvim") -- Commenting
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    },
+  },
 
-	use("nvim-lualine/lualine.nvim") -- Statusline
+  "numToStr/Comment.nvim",           -- Commenting
 
-	use("lewis6991/gitsigns.nvim") -- GitSigns
-	use("jose-elias-alvarez/null-ls.nvim") -- Null-ls for autoformatting
+  "nvim-lualine/lualine.nvim",       -- Statusline
 
-	use("folke/which-key.nvim")
+  "lewis6991/gitsigns.nvim",         -- GitSigns
+  "jose-elias-alvarez/null-ls.nvim", -- Null-ls for autoformatting
 
-	use("lukas-reineke/indent-blankline.nvim")
+  "folke/which-key.nvim",
 
-	use("gpanders/editorconfig.nvim") -- editorconfig
+  "lukas-reineke/indent-blankline.nvim",
 
-	use("mg979/vim-visual-multi", { branch = "master" }) -- visual multi
+  "gpanders/editorconfig.nvim",                    -- editorconfig
 
-	use({
-		"kylechui/nvim-surround",
-		tag = "*",
-		config = function()
-			require("nvim-surround").setup({})
-		end,
-	})
-end)
+  { "mg979/vim-visual-multi", branch = "master" }, -- visual multi
+
+  {
+    "kylechui/nvim-surround",
+    version = "*",
+    config = function()
+      require("nvim-surround").setup({})
+    end,
+  },
+})
