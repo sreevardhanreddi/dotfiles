@@ -60,6 +60,11 @@ return require("lazy").setup({
 		},
 	},
 
+	{
+		"stevearc/conform.nvim",
+		opts = {},
+	},
+
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 	-- "p00f/nvim-ts-rainbow",
 	"HiPhish/rainbow-delimiters.nvim",
@@ -99,7 +104,6 @@ return require("lazy").setup({
 	"nvim-lualine/lualine.nvim", -- Statusline
 
 	"lewis6991/gitsigns.nvim", -- GitSigns
-	"jose-elias-alvarez/null-ls.nvim", -- Null-ls for autoformatting
 
 	"folke/which-key.nvim",
 
