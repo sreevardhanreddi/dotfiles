@@ -28,11 +28,11 @@ return require("lazy").setup({
 	-- use("wbthomason/packer.nvim") -- Packer can manage itself
 	"nvim-lua/plenary.nvim", -- Common utilities
 
-	{ "nvim-telescope/telescope.nvim", tag = "0.1.1" },
+	{ "nvim-telescope/telescope.nvim", tag = "0.1.4" },
 
 	{
 		"VonHeikemen/lsp-zero.nvim",
-		branch = "v2.x",
+		branch = "v3.x",
 		dependencies = {
 			-- LSP Support
 			{ "neovim/nvim-lspconfig" }, -- Required
@@ -60,8 +60,14 @@ return require("lazy").setup({
 		},
 	},
 
+	{
+		"stevearc/conform.nvim",
+		opts = {},
+	},
+
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	"p00f/nvim-ts-rainbow",
+	-- "p00f/nvim-ts-rainbow",
+	"HiPhish/rainbow-delimiters.nvim",
 	"akinsho/toggleterm.nvim",
 	{ "akinsho/bufferline.nvim", version = "*" },
 
@@ -98,7 +104,6 @@ return require("lazy").setup({
 	"nvim-lualine/lualine.nvim", -- Statusline
 
 	"lewis6991/gitsigns.nvim", -- GitSigns
-	"jose-elias-alvarez/null-ls.nvim", -- Null-ls for autoformatting
 
 	"folke/which-key.nvim",
 
