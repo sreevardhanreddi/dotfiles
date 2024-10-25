@@ -80,6 +80,7 @@ return require("lazy").setup({
 	{ "tjdevries/colorbuddy.nvim" },
 	{ "projekt0n/github-nvim-theme" },
 	{ "folke/tokyonight.nvim" },
+	{ "catppuccin/nvim", name = "catppuccin" },
 	{ "gruvbox-community/gruvbox" },
 	{ "martinsione/darkplus.nvim" },
 	{
@@ -122,4 +123,6 @@ return require("lazy").setup({
 	},
 
 	"github/copilot.vim",
+
+	{ "echasnovski/mini.animate", version = "*" },
 })

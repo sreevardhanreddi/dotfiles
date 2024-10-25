@@ -42,4 +42,6 @@ vim.opt.wrap = false -- display lines as one long line
 
 -- vim.opt.colorcolumn = "80"
 
+vim.opt.clipboard = "unnamedplus" -- copy/paste to system clipboard
+
 vim.g.mapleader = " "
