@@ -32,3 +32,13 @@ for _, server_name in ipairs(get_servers()) do
 		capabilities = lsp_capabilities,
 	})
 end
+
+-- lspconfig.ts_ls.setup {}
+lspconfig.volar.setup({
+	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+	init_options = {
+		vue = {
+			hybridMode = false,
+		},
+	},
+})
