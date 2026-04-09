@@ -2,13 +2,19 @@
 
 source ./scripts/utils.sh
 
-log "installing neovim from ppa"
+log "installing neovim build dependencies"
 
-# install neovim
-apt install software-properties-common -y
-add-apt-repository ppa:neovim-ppa/stable -y
-apt update
-apt install neovim -y
+apt install -y ninja-build gettext cmake curl build-essential git
+
+NVIM_VERSION="v0.11.6"
+
+log "building neovim $NVIM_VERSION from source"
+
+git clone https://github.com/neovim/neovim /tmp/neovim
+cd /tmp/neovim
+git checkout $NVIM_VERSION
+make CMAKE_BUILD_TYPE=RelWithDebInfo
+make install
 
 log "linking nvim config"
 
