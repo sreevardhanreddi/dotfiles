@@ -1,21 +1,2 @@
-require("plugins")
-require("settings")
-require("keymaps")
-
-vim.cmd.colorscheme("tokyonight-night")
-
-require("plugins.configs.telescope")
-require("plugins.configs.lualine")
-require("plugins.configs.treesitter")
-require("plugins.configs.lsp-config")
-require("plugins.configs.cmp")
-require("plugins.configs.autopairs")
-require("plugins.configs.neotree")
-require("plugins.configs.comment")
-require("plugins.configs.toggleterm")
-require("plugins.configs.bufferline")
-require("plugins.configs.gitsigns")
-require("plugins.configs.conform")
-require("plugins.configs.which-key")
-require("plugins.configs.indent-blankline")
-require("plugins.configs.luasnip")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
