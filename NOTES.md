@@ -27,11 +27,7 @@ once the fonts are downloaded and installed, you'll need to set your terminal ed
 
 ## Neo(Vim)
 
-`$HOME/.vimrc` or `$HOME/.config/nvim/init.vim` are the config files for neovim, and VimPlug is the plugin manager. After the setup is done,
-
-- open `vim` or `neovim`.
-- Hit `esc + :` and type `PlugInstall`, this will install all the plugins for vim
-- restart editor
+`$HOME/.config/nvim` is the config directory for neovim, using [LazyVim](https://www.lazyvim.org/) as the plugin manager/distribution. After setup, just open `nvim` and LazyVim will bootstrap itself and install all plugins automatically.
 
 ---
 
@@ -40,5 +36,5 @@ once the fonts are downloaded and installed, you'll need to set your terminal ed
 `$HOME/.tmux.conf` is the config file for tmux. After the setup is done,
 
 - open `tmux`
-- Hit prefix i.e `ctrl + b` and Hit `P`, this will install all the plugins for tmux
+- Hit prefix i.e `ctrl + b` and Hit `I`, this will install all the plugins for tmux
 - restart tmux

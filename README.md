@@ -2,17 +2,16 @@
 
 ## Configures
 
-- zsh (with powelevel10k)
+- zsh (with powerlevel10k)
 - tmux (with tpm)
-- neo(vim) (with vimplug)
+- neovim (with LazyVim)
 - and common aliases
 
 ## installs extra terminal binaries
 
 - [bat](https://github.com/sharkdp/bat)
-- [fd](https://github.com/sharkdp/fd)
-- [lsd](https://github.com/Peltoche/lsd)
-- [fzf](https://github.com/junegunn/fzf)
+- [lsd](https://github.com/lsd-rs/lsd)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 ```shell
 
