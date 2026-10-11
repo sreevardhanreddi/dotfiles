@@ -37,7 +37,7 @@ echo "prefix + U"
 echo "remove the plugins by removing the plugin in the file"
 echo "prefix + u"
 
-echo "here prefix is 'ctrl + b'"
+echo "here prefix is 'ctrl + a'"
 echo "to copy files , select the text and hit y"
 
 echo_separator

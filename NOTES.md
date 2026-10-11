@@ -36,5 +36,5 @@ once the fonts are downloaded and installed, you'll need to set your terminal ed
 `$HOME/.tmux.conf` is the config file for tmux. After the setup is done,
 
 - open `tmux`
-- Hit prefix i.e `ctrl + b` and Hit `I`, this will install all the plugins for tmux
+- Hit prefix i.e. `ctrl + a` and hit `I`; this will install all the plugins for tmux
 - restart tmux
